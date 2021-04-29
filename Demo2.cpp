@@ -1,6 +1,6 @@
 /**
  * Demo program for Pandemic exercise - compares the different roles.
- *
+ * 
  * Author: Erel Segal-Halevi
  * Since : 2021-04
  */
@@ -75,7 +75,7 @@ int main() {
 	cout << boolalpha;
 	Board board;
 
-	OperationsExpert builder {board, City::Atlanta};
+	OperationsExpert builder {board, City::Atlanta}; 
 	builder.build();  // Build a research station in Atlanta, to prepare the board for the tests.
 
 	{
