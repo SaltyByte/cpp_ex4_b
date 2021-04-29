@@ -4,7 +4,7 @@
 namespace pandemic {
     class Virologist : public Player{
     public:
-        Virologist(Board&, City, int=0);
+        Virologist(Board&, City);
 
     };
 }

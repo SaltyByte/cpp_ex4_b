@@ -4,6 +4,6 @@
 namespace pandemic {
     class FieldDoctor : public Player{
     public:
-        FieldDoctor(Board&, City, int=0);
+        FieldDoctor(Board&, City);
     };
 }

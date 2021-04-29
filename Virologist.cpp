@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-Virologist::Virologist(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+Virologist::Virologist(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }

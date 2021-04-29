@@ -5,7 +5,7 @@ namespace pandemic {
     class OperationsExpert : public Player {
 
     public:
-        OperationsExpert(Board&, City , int=0);
+        OperationsExpert(Board&, City);
 
     };
 }

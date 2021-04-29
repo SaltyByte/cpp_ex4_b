@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-Scientist::Scientist(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+Scientist::Scientist(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city) {
 
 }

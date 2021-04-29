@@ -3,7 +3,7 @@
 
 using namespace pandemic;
 
-OperationsExpert::OperationsExpert(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+OperationsExpert::OperationsExpert(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }
 

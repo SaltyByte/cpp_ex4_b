@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-GeneSplicer::GeneSplicer(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+GeneSplicer::GeneSplicer(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }

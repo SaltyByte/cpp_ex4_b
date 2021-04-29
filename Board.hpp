@@ -10,9 +10,8 @@ namespace pandemic {
     private:
         std::map<City, int> board;
 
-
     public:
-
+        Board();
         friend std::ostream &operator<<(std::ostream&, const Board&);
         int& operator[](City);
         unsigned char is_clean();

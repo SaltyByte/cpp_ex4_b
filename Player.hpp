@@ -7,7 +7,7 @@ namespace pandemic {
 
 
     public:
-        Player(Board&, City, int);
+        Player(Board&, City);
         Player treat(City);
         Player drive(City);
         Player fly_direct(City);

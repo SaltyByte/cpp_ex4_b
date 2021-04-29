@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-Medic::Medic(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+Medic::Medic(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }

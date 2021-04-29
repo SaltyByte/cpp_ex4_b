@@ -5,6 +5,6 @@ namespace pandemic {
     class Dispatcher : public Player{
 
     public:
-        Dispatcher(Board&, City, int=0);
+        Dispatcher(Board&, City);
     };
 }

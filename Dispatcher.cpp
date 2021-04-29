@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-Dispatcher::Dispatcher(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+Dispatcher::Dispatcher(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }

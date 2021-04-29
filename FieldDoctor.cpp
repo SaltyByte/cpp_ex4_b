@@ -2,6 +2,6 @@
 
 using namespace pandemic;
 
-FieldDoctor::FieldDoctor(Board &gameBoard, City city, int numberOfCards) : Player(gameBoard, city, numberOfCards) {
+FieldDoctor::FieldDoctor(Board &gameBoard, City city) : Player(gameBoard, city) {
 
 }
