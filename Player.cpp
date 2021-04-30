@@ -1,7 +1,7 @@
 #include "Player.hpp"
 
+#include <iostream>
 
-#include <ostream>
 using namespace pandemic;
 using namespace std;
 
@@ -10,44 +10,47 @@ Player::Player(Board &gameBoard, City city) {
 
 }
 
-Player Player::treat(City city) {
+Player& Player::treat(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-Player Player::drive(City city) {
+Player& Player::drive(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-Player Player::fly_direct(City city) {
+Player& Player::fly_direct(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-Player Player::fly_charter(City city) {
+Player& Player::fly_charter(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-Player Player::fly_shuttle(City city) {
+Player& Player::fly_shuttle(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-void Player::discover_cure(Color color) {
+Player& Player::discover_cure(Color color) {
+
+    return *this;
 
 }
 
-Player Player::take_card(City city) {
+Player& Player::take_card(City city) {
     Board b;
-    return Player {b, City::Atlanta};
+    return *this;
 }
 
-void Player::build() {
+Player& Player::build() {
+    return *this;
 
 }
 
 string Player::role() {
-    return string();
+    return "Player";
 }

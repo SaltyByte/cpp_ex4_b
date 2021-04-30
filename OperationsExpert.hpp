@@ -6,6 +6,7 @@ namespace pandemic {
 
     public:
         OperationsExpert(Board&, City);
+        std::string role() override;
 
     };
 }

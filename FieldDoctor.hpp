@@ -5,5 +5,6 @@ namespace pandemic {
     class FieldDoctor : public Player{
     public:
         FieldDoctor(Board&, City);
+        std::string role() override;
     };
 }

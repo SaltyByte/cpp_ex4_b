@@ -11,15 +11,7 @@ Board::Board() {}
 
 
 int& Board::operator[](City city) {
-    for (auto& val : board) {
-        if (val.second == 0) {
-            board.erase(val.first);
-        }
-    }
-
-    if (board.find(city) == board.end()) {
-        return board[city];
-    }
+    return board[city];
 }
 
 
