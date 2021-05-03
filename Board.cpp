@@ -7,21 +7,29 @@ using namespace std;
 
 map<City, int> board;
 
-Board::Board() {}
+Board::Board() = default ;
 
 
 int& Board::operator[](City city) {
     return board[city];
 }
 
-
-unsigned char Board::is_clean() {
-    return board.empty();
-}
-
 ostream &pandemic::operator<<(ostream &os, const Board &b) {
+
+
     os << "Hello" << endl;
     return os;
 }
+
+
+unsigned char Board::is_clean() {
+    for (auto &val : board) {
+        if (val.second == 0) {
+            board.erase(val.first);
+        }
+    }
+    return board.empty();
+}
+
 
 
