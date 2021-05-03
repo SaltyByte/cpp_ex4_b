@@ -97,6 +97,7 @@ TEST_CASE("Jobs Test") {
     CHECK(virologist.role() == "Virologist");
 
 
+
     researcher.take_card(City::Baghdad)
               .take_card(City::Algiers)
               .take_card(City::Cairo)
