@@ -1,10 +1,15 @@
 #pragma once
 #include "Board.hpp"
 #include "Color.hpp"
+#include <map>
+#include <set>
 
 namespace pandemic {
     class Player {
-
+    private:
+        Board gboard;
+        City location;
+        std::set<City> cards;
 
     public:
         Player(Board&, City);

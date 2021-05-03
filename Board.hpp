@@ -1,7 +1,7 @@
 #pragma once
 
 #include "City.hpp"
-#include <ostream>
+#include <iostream>
 #include <map>
 #include <string>
 
@@ -9,12 +9,12 @@ namespace pandemic {
     class Board {
     private:
         std::map<City, int> board;
+        void deleteCities();
 
     public:
         Board();
-        friend std::ostream &operator<<(std::ostream&, const Board&);
         int& operator[](City);
-        unsigned char is_clean();
-        void remove_cures();
+        friend std::ostream &operator<<(std::ostream &os, const Board& b);
+        bool is_clean();
     };
 }
