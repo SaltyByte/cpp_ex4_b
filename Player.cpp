@@ -13,7 +13,9 @@ Player::Player(Board &gameBoard, City city) {
 }
 
 Player& Player::treat(City city) {
-    gboard[city]--;
+    if (location == city) {
+        gboard[city]--;
+    }
     return *this;
 }
 
@@ -25,6 +27,7 @@ Player& Player::drive(City city) {
 Player& Player::fly_direct(City city) {
     if (cards.find(city) != cards.end()) {
         cards.erase(city);
+        location = city;
         return *this;
     }
     throw invalid_argument("Cant fly_direct without location city card");

@@ -1,8 +1,4 @@
 #include "doctest.h"
-#include <iostream>
-#include <stdexcept>
-
-
 
 #include "Board.hpp"
 #include "City.hpp"
@@ -38,7 +34,6 @@ TEST_CASE("Player Tests") {
     CHECK_THROWS(player.drive(City::Lima));
     CHECK_THROWS(player.drive(City::Riyadh));
     CHECK_NOTHROW(player.drive(City::Miami));
-//    CHECK_THROWS(player.drive(City::Miami)); check if this is a throw
     player.drive(City::Bogota);
     player.drive(City::BuenosAires);
     player.build(); // build in Buenos Aires
@@ -58,8 +53,11 @@ TEST_CASE("Player Tests") {
     CHECK_THROWS(player.drive(City::Montreal));
     CHECK_NOTHROW(player.drive(City::Lagos));
 
-    CHECK_NOTHROW(player.fly_shuttle(City::BuenosAires));
-    CHECK_THROWS(player.build()); // cant build in Buenos Aires, already built
+    CHECK_THROWS(player.fly_shuttle(City::BuenosAires));
+    player.take_card(City::BuenosAires);
+    CHECK_NOTHROW(player.fly_direct(City::BuenosAires));
+    player.take_card(City::BuenosAires);
+    CHECK_NOTHROW(player.build()); // nothing happens, card stays in hand
     CHECK_NOTHROW(player.take_card(City::Bogota)
           .take_card(City::Johannesburg)
           .take_card(City::Khartoum)
@@ -161,18 +159,19 @@ TEST_CASE("Board Tests") {
           .take_card(City::Chicago);
     player.treat(City::Kinshasa);
     player.treat(City::Kinshasa);
+    CHECK(board[City::Kinshasa] == 0);
     player.fly_direct(City::MexicoCity);
     player.treat(City::MexicoCity);
     player.treat(City::MexicoCity);
     player.treat(City::MexicoCity);
-    CHECK_THROWS(player.treat(City::MexicoCity));
+    CHECK(board[City::MexicoCity] == 0);
     player.fly_direct(City::HoChiMinhCity);
     CHECK_THROWS(player.fly_direct(City::HoChiMinhCity));
     player.treat(City::HoChiMinhCity);
+    CHECK(board[City::HoChiMinhCity] == 0);
     player.fly_direct(City::Chicago);
     CHECK_FALSE(board.is_clean());
     player.treat(City::Chicago);
+    CHECK(board[City::Chicago] == 0);
     CHECK(board.is_clean());
-
-
 }
