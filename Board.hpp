@@ -15,5 +15,6 @@ namespace pandemic {
         friend std::ostream &operator<<(std::ostream&, const Board&);
         int& operator[](City);
         unsigned char is_clean();
+        void remove_cures();
     };
 }

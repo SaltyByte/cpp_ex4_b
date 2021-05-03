@@ -157,8 +157,8 @@ TEST_CASE("Board Tests") {
 
     GeneSplicer player {board, City::Kinshasa};
     player.take_card(City::MexicoCity)
-            .take_card(City::HoChiMinhCity)
-            .take_card(City::Chicago);
+          .take_card(City::HoChiMinhCity)
+          .take_card(City::Chicago);
     player.treat(City::Kinshasa);
     player.treat(City::Kinshasa);
     player.fly_direct(City::MexicoCity);

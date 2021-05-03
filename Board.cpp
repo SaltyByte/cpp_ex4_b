@@ -31,5 +31,9 @@ unsigned char Board::is_clean() {
     return board.empty();
 }
 
+void Board::remove_cures() {
+
+}
+
 
 
