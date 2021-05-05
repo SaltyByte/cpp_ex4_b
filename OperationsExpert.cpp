@@ -1,13 +1,11 @@
 #include "OperationsExpert.hpp"
 #include <string>
 
-using namespace pandemic;
 using namespace std;
+namespace pandemic {
+    OperationsExpert::OperationsExpert(Board &gameBoard, City city) : Player(gameBoard, city, "OperationsExpert") {
 
-OperationsExpert::OperationsExpert(Board &gameBoard, City city) : Player(gameBoard, city) {
 
+
+    }
 }
-string OperationsExpert::role() {
-    return "OperationsExpert";
-}
-

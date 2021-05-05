@@ -1,12 +1,13 @@
 #include "Researcher.hpp"
 #include <string>
-using namespace pandemic;
 using namespace std;
 
-Researcher::Researcher(Board &gameBoard, City city) : Player(gameBoard, city) {
+namespace pandemic {
+    Researcher::Researcher(Board &gameBoard, City city) : Player(gameBoard, city,"Researcher") {
 
-}
+    }
 
-string Researcher::role() {
-    return "Researcher";
+//    string Researcher::role() {
+//        return "Researcher";
+//    }
 }

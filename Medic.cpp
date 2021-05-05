@@ -1,11 +1,13 @@
 #include "Medic.hpp"
 #include <string>
-using namespace pandemic;
 using namespace std;
 
-Medic::Medic(Board &gameBoard, City city) : Player(gameBoard, city) {
+namespace pandemic {
+    Medic::Medic(Board &gameBoard, City city) : Player(gameBoard, city,"Medic") {
 
-}
-string Medic::role() {
-    return "Medic";
+    }
+
+//    string Medic::role() {
+//        return "Medic";
+//    }
 }

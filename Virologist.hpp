@@ -5,7 +5,7 @@ namespace pandemic {
     class Virologist : public Player{
     public:
         Virologist(Board&, City);
-        std::string role() override;
+        //std::string role() override;
 
     };
 }

@@ -5,7 +5,6 @@
 #include <iostream>
 #include <map>
 #include <vector>
-#include <string>
 #include <set>
 
 namespace pandemic {
@@ -23,5 +22,9 @@ namespace pandemic {
         int &operator[](City);
         bool is_clean();
         void remove_cures();
+        bool isResearchStation(City);
+        bool isCured(City);
+        int getDiseaseCubes(City);
+        std::tuple<Color, std::vector<std::string>> getColorAndConnections(City);
     };
 }

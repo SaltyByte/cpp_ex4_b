@@ -1,11 +1,12 @@
 #include "GeneSplicer.hpp"
 #include <string>
-using namespace pandemic;
 using namespace std;
+namespace pandemic {
+    GeneSplicer::GeneSplicer(Board &gameBoard, City city) : Player(gameBoard, city, "GeneSplicer") {
 
-GeneSplicer::GeneSplicer(Board &gameBoard, City city) : Player(gameBoard, city) {
+    }
 
-}
-string GeneSplicer::role() {
-    return "GeneSplicer";
+//    string GeneSplicer::role() {
+//        return "GeneSplicer";
+//    }
 }

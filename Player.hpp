@@ -7,21 +7,22 @@
 namespace pandemic {
     class Player {
     private:
-        Board gboard;
+        Board playingBoard;
         City location;
         std::set<City> cards;
+        std::string job;
 
     public:
-        Player(Board&, City);
-        Player& treat(City);
-        Player& drive(City);
-        Player& fly_direct(City);
-        Player& fly_charter(City);
-        Player& fly_shuttle(City);
-        Player& discover_cure(Color);
-        Player& take_card(City);
-        Player& build();
-        virtual std::string role();
+        Player(Board&, City, const std::string&);
+        virtual Player& treat(City);
+        virtual Player& drive(City);
+        virtual Player& fly_direct(City);
+        virtual Player& fly_charter(City);
+        virtual Player& fly_shuttle(City);
+        virtual Player& discover_cure(Color);
+        virtual Player& take_card(City);
+        virtual Player& build();
+        std::string role();
 
     };
 }

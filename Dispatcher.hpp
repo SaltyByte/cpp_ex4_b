@@ -6,6 +6,6 @@ namespace pandemic {
 
     public:
         Dispatcher(Board&, City);
-        std::string role() override;
+        //std::string role() override;
     };
 }

@@ -2,25 +2,26 @@
 #include "Board.hpp"
 #include <iostream>
 #include <stdexcept>
+#include <utility>
 
 using namespace pandemic;
 using namespace std;
 
 
-Player::Player(Board &gameBoard, City city) {
+Player::Player(Board &gameBoard, City city, const string &job) {
+    this->job = job;
     location = city;
-    gboard = gameBoard;
+    playingBoard = gameBoard;
 }
 
 Player& Player::treat(City city) {
     if (location == city) {
-        gboard[city]--;
+        playingBoard[city]--;
     }
     return *this;
 }
 
 Player& Player::drive(City city) {
-    Board b;
     return *this;
 }
 
@@ -58,5 +59,5 @@ Player& Player::build() {
 }
 
 string Player::role() {
-    return "Player";
+    return job;
 }

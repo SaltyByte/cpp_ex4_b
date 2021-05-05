@@ -4,9 +4,9 @@
 namespace pandemic {
     class OperationsExpert : public Player {
 
+
+
     public:
         OperationsExpert(Board&, City);
-        std::string role() override;
-
     };
 }

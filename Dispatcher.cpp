@@ -1,12 +1,15 @@
 #include "Dispatcher.hpp"
 #include <string>
-using namespace pandemic;
+
 using namespace std;
 
-Dispatcher::Dispatcher(Board &gameBoard, City city) : Player(gameBoard, city) {
+namespace pandemic {
+    Dispatcher::Dispatcher(Board &gameBoard, City city) : Player(gameBoard, city, "Dispatcher") {
 
-}
-string Dispatcher::role() {
-    return "Dispatcher";
+    }
+
+//    string Dispatcher::role() {
+//        return "Dispatcher";
+//    }
 }
 

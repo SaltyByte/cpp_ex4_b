@@ -7,6 +7,6 @@ namespace pandemic {
 
     public:
         Scientist(Board&, City, int);
-        std::string role() override;
+        //std::string role() override;
     };
 }

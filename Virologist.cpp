@@ -1,11 +1,13 @@
 #include "Virologist.hpp"
 #include <string>
-using namespace pandemic;
 using namespace std;
 
-Virologist::Virologist(Board &gameBoard, City city) : Player(gameBoard, city) {
+namespace pandemic {
+    Virologist::Virologist(Board &gameBoard, City city) : Player(gameBoard, city, "Virologist") {
 
-}
-string Virologist::role() {
-    return "Virologist";
+    }
+
+//    string Virologist::role() {
+//        return "Virologist";
+//    }
 }
