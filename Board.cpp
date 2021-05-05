@@ -10,27 +10,32 @@
 using namespace std;
 
 namespace pandemic {
+    map<string, tuple<string, vector<string>>> Board::connections; // static because we need to read only 1 times.
+    map<City, string> Board::toStringCity;
+
     Board::Board() {
-        ifstream file("cities_map.txt");
-        string mainCity;
-        string color;
-        string cities;
-        string city;
-        int enumIndex = 0;
-        while (!file.eof()) {
-            getline(file, mainCity, ' '); // get main city
-            getline(file, color, ' '); // get color
-            getline(file, cities, '\r'); // get connected cities
-            mainCity.erase(remove(mainCity.begin(), mainCity.end(), '\n'), mainCity.end()); // erase \n
-            vector<string> vec; // vector to store connected cities
-            istringstream stringStream(cities);
-            while (!stringStream.eof()) {
-                getline(stringStream, city, ' ');
-                vec.insert(vec.begin(), city);
+        if (connections.empty()) {
+            ifstream file("cities_map.txt");
+            string mainCity;
+            string color;
+            string cities;
+            string city;
+            int enumIndex = 0;
+            while (!file.eof()) {
+                getline(file, mainCity, ' '); // get main city
+                getline(file, color, ' '); // get color
+                getline(file, cities, '\r'); // get connected cities
+                mainCity.erase(remove(mainCity.begin(), mainCity.end(), '\n'), mainCity.end()); // erase \n
+                vector<string> vec; // vector to store connected cities
+                istringstream stringStream(cities);
+                while (!stringStream.eof()) {
+                    getline(stringStream, city, ' ');
+                    vec.insert(vec.begin(), city);
+                }
+                connections[mainCity] = make_tuple(color, vec);
+                toStringCity[(City) enumIndex] = mainCity;
+                enumIndex++;
             }
-            connections[mainCity] = make_tuple(color, vec);
-            toStringCity[(City) enumIndex] = mainCity;
-            enumIndex++;
         }
         for (auto &val : toStringCity) {
             diseases[val.first] = 0;
