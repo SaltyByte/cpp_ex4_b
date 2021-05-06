@@ -4,17 +4,18 @@
 #include "Color.hpp"
 #include <iostream>
 #include <map>
-#include <vector> // not needed
 #include <set>
 
 namespace pandemic {
     class Board {
     private:
-        static std::map<std::string, std::tuple<std::string, std::vector<std::string>>> connections; // map which gives us by value city:
-        static std::map<City, std::string> toStringCity;                                             // (1)Color,
+        static std::map<City, std::tuple<Color, std::set<City>>> connections; // map which gives us by value city:
+        static std::map<City, std::string> cityToString;                                             // (1)Color,
         std::map<City, int> diseases;                                                                // (2)vector with connected cities
-        std::set<City> researchStation;                                                              // todo Try to make City instead of string
-        std::set<City> cures;
+        std::set<City> researchStation;
+        std::set<Color> cures;
+        static void initBoard();
+        static std::string getColor(Color);
 
     public:
         Board();
@@ -23,8 +24,8 @@ namespace pandemic {
         bool is_clean();
         void remove_cures();
         bool isResearchStation(City);
-        bool isCured(City);
-        int getDiseaseCubes(City);
-        std::tuple<Color, std::vector<std::string>> getColorAndConnections(City);
+        void setResearchStation(City);
+        bool isCured(Color);
+        std::tuple<Color, std::set<City>> getColorAndConnections(City);
     };
 }
