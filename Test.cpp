@@ -1,18 +1,18 @@
 #include "doctest.h"
 
-#include "Board.hpp"
-#include "City.hpp"
-#include "Color.hpp"
-#include "Player.hpp"
+#include "sources/Board.hpp"
+#include "sources/City.hpp"
+#include "sources/Color.hpp"
+#include "sources/Player.hpp"
 
-#include "Researcher.hpp"
-#include "Scientist.hpp"
-#include "FieldDoctor.hpp"
-#include "GeneSplicer.hpp"
-#include "OperationsExpert.hpp"
-#include "Dispatcher.hpp"
-#include "Medic.hpp"
-#include "Virologist.hpp"
+#include "sources/Researcher.hpp"
+#include "sources/Scientist.hpp"
+#include "sources/FieldDoctor.hpp"
+#include "sources/GeneSplicer.hpp"
+#include "sources/OperationsExpert.hpp"
+#include "sources/Dispatcher.hpp"
+#include "sources/Medic.hpp"
+#include "sources/Virologist.hpp"
 
 using namespace pandemic;
 using namespace std;
@@ -20,6 +20,7 @@ using namespace std;
 TEST_CASE("Player Tests") {
     Board board;
     board[City::BuenosAires] = 1;
+    board[City::SaoPaulo] = 1;
 
     Researcher player {board, City::Atlanta};
     player.take_card(City::Karachi)
@@ -108,9 +109,9 @@ TEST_CASE("Jobs Test") {
 
     scientist.take_card(City::Atlanta)
              .take_card(City::Chicago)
-             .take_card(City::Essen)
-             .take_card(City::Atlanta);
+             .take_card(City::Essen);
     scientist.build();
+    scientist.take_card(City::Atlanta);
     CHECK_NOTHROW(scientist.discover_cure(Color::Blue)); // can cure with n=3 cards (from constructor)
 
 
@@ -123,7 +124,9 @@ TEST_CASE("Jobs Test") {
                .take_card(City::Bogota)
                .take_card(City::BuenosAires)
                .take_card(City::Cairo)
-               .take_card(City::Chennai);
+               .take_card(City::Chennai)
+               .take_card(City::SaoPaulo);
+    geneSplicer.build();
     CHECK_NOTHROW(geneSplicer.discover_cure(Color::Red)); // should cure with any 5 cards
 
 

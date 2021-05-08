@@ -3,10 +3,11 @@
 
 namespace pandemic {
     class Scientist : public Player{
-
+    private:
+        int cardsNeededToCure;
 
     public:
         Scientist(Board&, City, int);
-        //std::string role() override;
+        Scientist& discover_cure(Color) override;
     };
 }

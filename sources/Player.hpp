@@ -1,19 +1,18 @@
 #pragma once
 #include "Board.hpp"
 #include "Color.hpp"
-#include <map>
 #include <set>
 
 namespace pandemic {
     class Player {
-    private:
-        Board playingBoard;
+    protected:
+        Board *playingBoard;
         City location;
         std::set<City> cards;
         std::string job;
 
     public:
-        Player(Board&, City, const std::string&);
+        Player(Board&, City, const std::string& job="Player");
         virtual Player& treat(City);
         virtual Player& drive(City);
         virtual Player& fly_direct(City);
@@ -23,6 +22,6 @@ namespace pandemic {
         virtual Player& take_card(City);
         virtual Player& build();
         std::string role();
-
+        void remove_cards();
     };
 }

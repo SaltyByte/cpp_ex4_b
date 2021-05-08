@@ -8,7 +8,6 @@ BuenosAires Yellow Bogota SaoPaulo
 Cairo Black Algiers Istanbul Baghdad Khartoum Riyadh
 Chennai Black Mumbai Delhi Kolkata Bangkok Jakarta
 Chicago Blue SanFrancisco LosAngeles MexicoCity Atlanta Montreal
-
 Delhi Black Tehran Karachi Mumbai Chennai Kolkata
 Essen Blue London Paris Milan StPetersburg
 HoChiMinhCity Red Jakarta Bangkok HongKong Manila
@@ -19,7 +18,6 @@ Johannesburg Yellow Kinshasa Khartoum
 Karachi Black Tehran Baghdad Riyadh Mumbai Delhi
 Khartoum Yellow Cairo Lagos Kinshasa Johannesburg
 Kinshasa Yellow Lagos Khartoum Johannesburg
-
 Kolkata Black Delhi Chennai Bangkok HongKong
 Lagos Yellow SaoPaulo Khartoum Kinshasa
 Lima Yellow MexicoCity Bogota Santiago
@@ -30,7 +28,6 @@ Manila Red Taipei SanFrancisco HoChiMinhCity Sydney
 MexicoCity Yellow LosAngeles Chicago Miami Lima Bogota
 Miami Yellow Atlanta MexicoCity Washington Bogota
 Milan Blue Essen Paris Istanbul
-
 Montreal Blue Chicago Washington NewYork
 Moscow Black StPetersburg Istanbul Tehran
 Mumbai Black Karachi Delhi Chennai
@@ -41,7 +38,6 @@ Riyadh Black Baghdad Cairo Karachi
 SanFrancisco Blue LosAngeles Chicago Tokyo Manila
 Santiago Yellow Lima
 SaoPaulo Yellow Bogota BuenosAires Lagos Madrid
-
 Seoul Red Beijing Shanghai Tokyo
 Shanghai Red Beijing HongKong Taipei Seoul Tokyo
 StPetersburg Blue Essen Istanbul Moscow

@@ -5,7 +5,6 @@ namespace pandemic {
     class GeneSplicer : public Player{
     public:
         GeneSplicer(Board&, City);
-        //std::string role() override;
-
+        GeneSplicer &discover_cure(Color) override;
     };
 }
