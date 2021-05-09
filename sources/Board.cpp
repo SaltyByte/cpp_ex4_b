@@ -20,9 +20,7 @@ namespace pandemic {
     }
 
     void Board::setCure(Color color) {
-        if (!isCured(color)){
-            cures.insert(color);
-        }
+        cures.insert(color); // possible because set does not allow cuplicates
     }
 
     int &Board::operator[](City city) {
